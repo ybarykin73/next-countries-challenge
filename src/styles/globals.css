@@ -1,0 +1,40 @@
+:root {
+  --max-width: 1440px;
+
+   /* Colors */
+   --text-color-light-mode: hsl(200, 15%, 8%);
+   --text-color-dark-mode: hsl(0, 0%, 100%);
+
+   --background-light-mode: hsl(0, 0%, 98%);
+   --background-dark-mode: hsl(207, 26%, 17%);
+
+   --primary-color-light-mode: hsl(0, 0%, 52%);
+   --primary-color-dark-mode: hsl(209, 23%, 22%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {}
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 14px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
