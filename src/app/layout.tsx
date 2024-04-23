@@ -1,3 +1,5 @@
+import Header from "../components/header/Header";
+
 import type { Metadata } from "next";
 
 import { Nunito } from "../assets/fonts/fonts";
@@ -16,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={Nunito.className}>
-        { children }
+        <Header />
+        <main className="container">
+          { children }
+        </main>
       </body>
     </html>
   );

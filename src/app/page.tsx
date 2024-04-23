@@ -1,10 +1,11 @@
-import Header from '@/src/components/header/Header'
+import Countrues from '../components/countrue/countrues/Countrues';
+import { getAllCountrues } from '../server/api/countries/getAllCountries'
 
-export default function Home() {
+export default async function Home() {
+
+  const countrues = await getAllCountrues()
+
   return (
-    <>
-      <Header />
-      <main className='container' />
-    </>
+    <Countrues countrues={countrues} />
   );
 }

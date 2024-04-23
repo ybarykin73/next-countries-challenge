@@ -1,5 +1,6 @@
 :root {
   --max-width: 1440px;
+  --border-radius: 6px;
 
    /* Colors */
    --text-color-light-mode: hsl(200, 15%, 8%);
@@ -26,6 +27,7 @@ body {
   font-size: 14px;
   margin: 0;
   padding: 0;
+  background-color: var(--background-light-mode);
 }
 
 a {
@@ -42,7 +44,7 @@ a {
     padding: 0 30px;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 1200px) {
     padding: 0 80px;
   }
 }
