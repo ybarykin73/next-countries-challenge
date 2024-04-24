@@ -22,7 +22,7 @@ const Card = (props: any) => {
         />
       </div>
       <div className='card__body'>
-        <Link href={`/countrue/${name}`}>
+        <Link href={`/${name}`}>
           <h2 className='card__name'>{name}</h2>
         </Link>          
         <ul className='card__feature'>

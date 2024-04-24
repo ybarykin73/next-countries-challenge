@@ -1,4 +1,5 @@
 import Countrues from '../components/countrue/countrues/Countrues';
+
 import { getAllCountrues } from '../server/api/countries/getAllCountries'
 
 export default async function Home() {
