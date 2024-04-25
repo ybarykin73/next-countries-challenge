@@ -9,9 +9,7 @@ const Page = async ({params}: { params: TParams}) => {
   const country = await getCountry(params.slug)
 
   return (
-    <div> countru { params.slug }
-        <Country country={country} />
-    </div>
+    <Country {...country} />
   )
 }
 

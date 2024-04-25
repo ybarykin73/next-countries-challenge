@@ -15,7 +15,7 @@ const Card = (props: any) => {
     <div className="card">
       <div className='card__image'>
         <Image
-          fill={true}
+          fill
           src={flag.svg} 
           alt={flag.alt || name}
           className='card__img'
