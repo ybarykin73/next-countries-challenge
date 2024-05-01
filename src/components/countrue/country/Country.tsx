@@ -1,42 +1,42 @@
 import Image from 'next/image'
 
+import { ICountry } from '@/src/types/ICountry'
 import './Country.scss'
 
-const Country = (props: any) => {
+const Country:React.FC<ICountry> = (props) => {
 
   const {
     tld,
     name,
-    flags,
     region,
-    subregion,
-    currencies,
     capital,
+    languages,
+    subregion,
+    flagImage,
     population,
-    languages
+    currencies,
+    flagImageAlt,
+    officialName,
   } = props
-
-  const currencie = Object.values(currencies)
 
   return (
     <article className="country">
       <div className='country__image'>
         <Image 
           fill
-          src={flags.svg}
-          alt={flags.alt || name.common }
+          src={flagImage}
+          alt={flagImageAlt || name }
           className='country__img'
         />
       </div>
       <div className='country__main'>
         <h1 className='country__title'>
-          { name.common }
+          { name }
         </h1>
         <div className='country__body'>
-          
           <ul className='country__feature'>
             <li className='country__feature-item'>
-              <b>Native Name: </b>{ name.official }
+              <b>Native Name: </b>{ officialName }
             </li>
             <li className='country__feature-item'>
               <b>Porulation: </b>{ population }
@@ -48,24 +48,27 @@ const Country = (props: any) => {
               <b>Sub Region: </b>{ subregion }
             </li>
             <li className='country__feature-item'>
-              <b>Capital: </b>{ capital[0] }
+              <b>Capital: </b>{ capital }
             </li>
           </ul>
           <ul className='country__feature'>
             <li className='country__feature-item'>
               <b>Top Level Domain: </b>
                 { 
-                  tld.map((item: any) => item)
+                  tld
                 }
             </li>
             <li className='country__feature-item'>
-              <b>Currencies: </b>{ currencie.map((item: any) => item.name) }
+              <b>Currencies: </b> {
+                !currencies.length 
+                  ?
+                   '-'
+                  :  
+                   currencies.map((item: any) => item.name) 
+              }
             </li>
             <li className='country__feature-item'>
-              <b>Languages: </b>
-              {
-                Object.values(languages)
-              }
+              <b>Languages: </b> { languages }
             </li>
           </ul>
         </div>
