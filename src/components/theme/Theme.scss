@@ -1,0 +1,34 @@
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+
+    @media screen and (min-width: 750px) {
+      margin-inline-end: 10px;
+      width: 50px;
+      height: 50px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-inline-end: 5px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+
+    @media screen and (min-width: 750px) {
+      font-size: 25px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+    }
+  }
+}
