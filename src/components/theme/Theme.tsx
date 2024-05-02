@@ -7,8 +7,8 @@ import './Theme.scss'
 const Theme = () => {
   return (
     <div className="theme">
-      <Image 
-        src={'/moon.svg'} 
+      <Image
+        src={'/moon.svg'}
         width={35}
         height={35}
         alt="theme"
